@@ -31,10 +31,18 @@ km.grid(column=3,row=2)
 converted_value = Label(font=("Arial",24,"bold"))
 converted_value.grid(column=2,row=2)
 
-# Calculate Button
+# Calculate Button + self func
 def action():
 
     get_value = input.get()
     result = round(float(get_value) * 1.6)
     converted_value.config(text=result)
     print("calculated")
+    
+button = Button(text="Calculate",command=action)
+button.grid(column=2,row=3)
+
+
+
+
+window.mainloop()
