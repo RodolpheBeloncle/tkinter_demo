@@ -6,6 +6,26 @@ window = Tk()
 window.title("my first GUI program")
 window.minsize(width = 500,height=300)
 
+# adding window's padding
+window.config(padx=200,pady=200)
+
+
+#Label class:
+# create the component
+my_label = Label(text="My Label",font=("Arial",24,"bold"))
+
+# get the component/show in the window:
+# NB: CAN'T MIXUP PACK AND GRID
+#Set position of my_label
+#my_label.place(x=100,y=200)
+#my_label.pack(side="left)
+my_label.grid(column=0,row=0)
+
+# adding padding around my_label
+my_label.config(padx=50,pady=50)
+
+# different way to changing text
+#my_label["text"] = "new text"
 
 #Label class:
 # create the component
